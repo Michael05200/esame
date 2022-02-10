@@ -154,13 +154,13 @@ def compute_avg_monthly_difference(time_series, first_year, last_year):
                 lista_variazioni.append(tot/len(lista_valori))
         
 
-    print('lista variazioni: {}'.format(lista_variazioni))
+   # print('lista variazioni: {}'.format(lista_variazioni))
     return lista_variazioni
 
 
 # corpo programma
-time_series_file = CSVTimeSeriesFile(name='data.csv')
+#time_series_file = CSVTimeSeriesFile(name='data.csv')
 
-time_series = time_series_file.get_data()
+#time_series = time_series_file.get_data()
 
-avg_monthly_difference=compute_avg_monthly_difference(time_series, "1949", "1951") 
+#avg_monthly_difference=compute_avg_monthly_difference(time_series, "1949", "1951") 
