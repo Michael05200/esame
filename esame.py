@@ -46,13 +46,13 @@ def compute_avg_monthly_difference(time_series, first_year, last_year):
     if len(first_year) != 4 or len(last_year) != 4:
         raise ExamException('non è inserito un anno')
 
-    if (first_year, str) == True:
+    if type(first_year) == int:
         raise ExamException('il valore è una stringa')
-    if (last_year, str) == True:
+    if type(last_year) == int:
         raise ExamException('il valore è una string')
-    if (first_year) == float:
+    if type(first_year) == float:
         raise ExamException('questo non è un anno')
-    if (last_year) == float:
+    if type(last_year) == float:
         raise ExamException('questo non è un anno')
 
 
@@ -164,4 +164,3 @@ time_series_file = CSVTimeSeriesFile(name='data.csv')
 time_series = time_series_file.get_data()
 
 avg_monthly_difference=compute_avg_monthly_difference(time_series, "1949", "1951") 
-
